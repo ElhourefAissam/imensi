@@ -1,0 +1,49 @@
+.file-drop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+.file-drop.dragging {
+  border: 2px dashed #666;
+}
+
+.file-drop p {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.file-drop p:first-child {
+  font-weight: bold;
+}
+
+.file-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.file-card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.file-card h2 {
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
+}
