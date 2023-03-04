@@ -31,68 +31,78 @@ export default function TrainingPage() {
       <div className=" grid gap-4 mt-5">
         {/* Information section */}
         <div className="col-span-6 bg-white rounded-md p-5 border border-gray-200">
-          <div className="grid gap-4 grid-cols-1 md:grid-cols-3 justify-between">
-            <SelectComponent
-              data={categories}
-              label="name"
-              value="id"
-              name="Category"
-              id="category"
-              className="border border-gray-200 rounded-md p-2 w-full"
-              onChange={(e) => {
-                console.log(e.target.value);
-              }}
-              addFunction={() => {
-                console.log("add new");
-              }}
-            />
-            <SelectComponent
-              data={topics}
-              label="name"
-              value="id"
-              name="Topic"
-              id="topic"
-              className="border border-gray-200 rounded-md p-2 w-full"
-              onChange={(e) => {
-                console.log(e.target.value);
-              }}
-              addFunction={() => {
-                console.log("add new");
-              }}
-            />
-            <SelectComponent
-              data={years}
-              label="name"
-              value="id"
-              name="Valid For"
-              id="year"
-              className="border border-gray-200 rounded-md p-2 w-full"
-              onChange={(e) => {
-                console.log(e.target.value);
-              }}
-            />
-            <Input label="Training" type="text" />
-            <SelectComponent
-              data={workers_type}
-              label="Assign to"
-              value="id"
-              name="Valid For"
-              id="year"
-              className="border border-gray-200 rounded-md p-2 w-full"
-              onChange={(e) => {
-                console.log(e.target.value);
-              }}
-            />
+          <div className="grid gap-4 grid-cols-3 md:grid-cols-1 justify-between">
+            <div>
+              <SelectComponent
+                data={categories}
+                label="name"
+                value="id"
+                name="Category"
+                id="category"
+                className="border border-gray-200 rounded-md p-2 w-full"
+                onChange={(e) => {
+                  console.log(e.target.value);
+                }}
+                addFunction={() => {
+                  console.log("add new");
+                }}
+              />
+            </div>
+            <div>
+              <SelectComponent
+                data={topics}
+                label="name"
+                value="id"
+                name="Topic"
+                id="topic"
+                className="border border-gray-200 rounded-md p-2 w-full"
+                onChange={(e) => {
+                  console.log(e.target.value);
+                }}
+                addFunction={() => {
+                  console.log("add new");
+                }}
+              />
+            </div>
+            <div>
+              <SelectComponent
+                data={years}
+                label="name"
+                value="id"
+                name="Valid For"
+                id="year"
+                className="border border-gray-200 rounded-md p-2 w-full"
+                onChange={(e) => {
+                  console.log(e.target.value);
+                }}
+              />
+            </div>
+            <div className="col-span-2">
+              <Input label="Training" type="text" />
+            </div>
+            <div>
+              <SelectComponent
+                data={workers_type}
+                label="Assign to"
+                value="id"
+                name="Valid For"
+                id="year"
+                className="border border-gray-200 rounded-md p-2 w-full"
+                onChange={(e) => {
+                  console.log(e.target.value);
+                }}
+              />
+            </div>
           </div>
         </div>
 
         {/* Image section */}
-        <div className="col-span-4 bg-white rounded-md p-5 border border-gray-200 w-14">
+        <div className="col-span-4 bg-white rounded-md p-5 border border-gray-200">
           <FileDrop
             type={["image/jpeg", "image/png"]}
             title="Image"
             text="Drag and drop your Image here"
-            textBottom="Only JPG, PNG files are allowed, Image must be at less than 2MB"
+            textBottom="*Only JPG, PNG files are allowed, Image must be at less than 2MB"
             imgSize="70"
             onFileSelect={(item) => {
               console.log(item);
@@ -106,7 +116,7 @@ export default function TrainingPage() {
             type={["application/pdf", "application/msword"]}
             title="Training File"
             text="Drag and drop your file here"
-            textBottom="Only JPG, PNG files are allowed, Image must be at less than 2MB"
+            textBottom="*Only Video ans SlideShow files are allowed"
             imgSize="70"
             onFileSelect={(item) => {
               console.log(item);

@@ -46,7 +46,7 @@ function FileDrop({
     <div className="flex flex-col">
       <h4>{title}</h4>
       <div
-        className={"mt-4 p-12 border-separate border-2 border-dashed h-40"}
+        className={"mt-4 p-12 border-separate border-4 border-dashed h-56"}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
@@ -77,6 +77,9 @@ function FileDrop({
             />
           </div>
         )}
+      </div>
+      <div className="items-end mt-6 -mb-4">
+        <p className="text-gray-400 text-sm">{textBottom}</p>
       </div>
     </div>
   );
